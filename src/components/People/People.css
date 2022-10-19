@@ -1,0 +1,15 @@
+.people {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightpink {
+    background-color: lightpink;
+}
+
+.lightblue {
+    background-color: lightblue;
+}
