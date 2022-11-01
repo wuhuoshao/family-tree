@@ -1,6 +1,7 @@
 import FamilyTree from './components/FamilyTree'
 import './App.css';
-const flatList = [
+import { useState } from 'react';
+const originalList = [
   {
     id: 2351232112252,
     name: "Sally",
@@ -79,8 +80,14 @@ const flatList = [
   },
 ];
 function App() {
+  const [flatList, setFlatList] = useState(originalList)
+  const change = () => {
+    originalList.pop()
+    setFlatList([...originalList])
+  }
   return (
     <div className="App">
+      <button onClick={() => change()}>Change the original data</button>
       <FamilyTree flatList={flatList}></FamilyTree>
     </div>
   );
